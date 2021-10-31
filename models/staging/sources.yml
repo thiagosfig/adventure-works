@@ -1,0 +1,199 @@
+version: 2
+
+sources:
+  - name: adventureworks
+    description: Réplica do banco de dados transacional (PostgreSQL) da Adventure Works que armazena os dados de suas diferentes áreas.
+
+    tables:
+      - name: address
+        description: >
+          Street address information for customers, employees, and vendors.
+        columns:
+          - name: addressid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: businessentity
+        description: >
+          Source of the ID that connects vendors, customers, and employees with address and contact information.
+        columns:
+          - name: businessentityid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: businessentityaddress
+        description: >
+          Cross-reference table mapping customers, vendors, and employees to their addresses.
+        columns:
+          - name: businessentityid
+            description: Primary Key from Bussiness Entity
+            testes:
+              - not null
+
+      - name: countryregion
+        description: >
+          Lookup table containing the ISO standard codes for countries and regions.
+        columns:
+          - name: countryregioncode
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: creditcard
+        description: >
+          Customer credit card information.
+        columns:
+          - name: creditcardid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: customer
+        description: >
+          Current customer information. Also see the Person and Store tables.
+        columns:
+          - name: customerid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: department
+        description: >
+          Lookup table containing the departments within the Adventure Works Cycles company.
+        columns:
+          - name: departmentid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: employee
+        description: >
+          Employee information such as salary, department, and title.
+        columns:
+          - name: bussinessentityid
+            description: Primary Key from Bussiness Entity
+            testes:
+              - not null
+
+      - name: person
+        description: >
+          Human beings involved with AdventureWorks: employees, customer contacts, and vendor contacts.
+        columns:
+          - name: bussinessentityid
+            description: Primary Key from Bussiness Entity
+            testes:
+              - not null
+
+      - name: product
+        description: >
+          Products sold or used in the manfacturing of sold products.
+        columns:
+          - name: productid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: salesorderheader
+        description: >
+          General sales order information.
+        columns:
+          - name: salesorderid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: salesorderdetail
+        description: >
+          Individual products associated with a specific sales order. See SalesOrderHeader.
+        columns:
+          - name: salesorderdetailid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: salesorderheadersalesreason
+        description: >
+          Cross-reference table mapping sales orders to sales reason codes.
+        columns:
+          - name: salesorderid
+            description: Primary Key from Sales Order
+            testes:
+              - not null
+
+      - name: salesperson
+        description: >
+          Sales representative current information.
+        columns:
+          - name: bussinessentityid
+            description: Primary Key from Bussiness Entity
+            testes:
+              - not null
+
+      - name: salesreason
+        description: >
+          Lookup table of customer purchase reasons.
+        columns:
+          - name: salesreasonid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: shipmethod
+        description: >
+          Shipping company lookup table.
+        columns:
+          - name: shipmethodid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: specialoffer
+        description: >
+          Sale discounts lookup table.
+        columns:
+          - name: specialofferid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: specialofferproduct
+        description: >
+          Cross-reference table mapping products to special offer discounts.
+        columns:
+          - name: specialofferid
+            description: Primary Key from Special Offer
+            testes:
+              - not null
+
+      - name: stateprovince
+        description: >
+          State and province lookup table.
+        columns:
+          - name: stateprovinceid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: store
+        description: >
+          Customers (resellers) of Adventure Works products.
+        columns:
+          - name: bussinessentityid
+            description: Primary Key from Bussiness Entity
+            testes:
+              - not null

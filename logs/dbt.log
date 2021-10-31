@@ -1,0 +1,1758 @@
+2021-10-31 14:48:14.146316 (MainThread): Running with dbt=0.21.0
+2021-10-31 14:48:14.681915 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/thiagosfig/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', select=['dim_address'], selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-10-31 14:48:14.683332 (MainThread): Tracking: tracking
+2021-10-31 14:48:14.711562 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1908c000a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1905d3ffd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1905d3fc40>]}
+2021-10-31 14:48:14.778618 (MainThread): Partial parsing not enabled
+2021-10-31 14:48:14.899163 (MainThread): Parsing macros/catalog.sql
+2021-10-31 14:48:14.937806 (MainThread): Parsing macros/etc.sql
+2021-10-31 14:48:14.942359 (MainThread): Parsing macros/adapters.sql
+2021-10-31 14:48:14.974000 (MainThread): Parsing macros/materializations/incremental.sql
+2021-10-31 14:48:14.992147 (MainThread): Parsing macros/materializations/table.sql
+2021-10-31 14:48:15.003349 (MainThread): Parsing macros/materializations/copy.sql
+2021-10-31 14:48:15.007116 (MainThread): Parsing macros/materializations/seed.sql
+2021-10-31 14:48:15.011086 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-10-31 14:48:15.013345 (MainThread): Parsing macros/materializations/view.sql
+2021-10-31 14:48:15.016650 (MainThread): Parsing macros/core.sql
+2021-10-31 14:48:15.020962 (MainThread): Parsing macros/adapters/common.sql
+2021-10-31 14:48:15.085559 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-10-31 14:48:15.088150 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-10-31 14:48:15.090254 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-10-31 14:48:15.092293 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-10-31 14:48:15.095118 (MainThread): Parsing macros/etc/datetime.sql
+2021-10-31 14:48:15.104644 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-10-31 14:48:15.107152 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-10-31 14:48:15.109761 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-10-31 14:48:15.112296 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-10-31 14:48:15.114052 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-10-31 14:48:15.116916 (MainThread): Parsing macros/etc/query.sql
+2021-10-31 14:48:15.118123 (MainThread): Parsing macros/materializations/helpers.sql
+2021-10-31 14:48:15.130436 (MainThread): Parsing macros/materializations/test.sql
+2021-10-31 14:48:15.137943 (MainThread): Parsing macros/materializations/table/table.sql
+2021-10-31 14:48:15.147221 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-10-31 14:48:15.151599 (MainThread): Parsing macros/materializations/view/view.sql
+2021-10-31 14:48:15.160951 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-10-31 14:48:15.187180 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-10-31 14:48:15.203909 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-10-31 14:48:15.216788 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-10-31 14:48:15.218866 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-10-31 14:48:15.241309 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-10-31 14:48:15.244157 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-10-31 14:48:15.264373 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-10-31 14:48:15.567406 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_specialofferproduct".
+2021-10-31 14:48:15.583004 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_product".
+2021-10-31 14:48:15.587233 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesreason".
+2021-10-31 14:48:15.592547 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_stateprovince".
+2021-10-31 14:48:15.597822 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_department".
+2021-10-31 14:48:15.602146 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesorderdetail".
+2021-10-31 14:48:15.607520 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_store".
+2021-10-31 14:48:15.612953 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_employee".
+2021-10-31 14:48:15.617370 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_customer".
+2021-10-31 14:48:15.621855 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesperson".
+2021-10-31 14:48:15.627615 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_specialoffer".
+2021-10-31 14:48:15.631997 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_businessentityaddress".
+2021-10-31 14:48:15.636248 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesorderheader".
+2021-10-31 14:48:15.642370 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_countryregion".
+2021-10-31 14:48:15.647277 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_address".
+2021-10-31 14:48:15.651582 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_shipmethod".
+2021-10-31 14:48:15.655837 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_creditcard".
+2021-10-31 14:48:15.661779 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_businessentity".
+2021-10-31 14:48:15.666222 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesorderheadersalesreason".
+2021-10-31 14:48:15.670477 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_person".
+2021-10-31 14:48:15.676230 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_address".
+2021-10-31 14:48:15.681297 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_customer".
+2021-10-31 14:48:15.685740 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_product".
+2021-10-31 14:48:15.690305 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_special_offer".
+2021-10-31 14:48:15.695727 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_employee".
+2021-10-31 14:48:15.700266 (MainThread): Acquiring new bigquery connection "model.adventure_works.fact_sale".
+2021-10-31 14:48:15.832143 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '83b085b6-3b49-4988-b8ca-fdb05ff1b03b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1905bdbd60>]}
+2021-10-31 14:48:15.844382 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '83b085b6-3b49-4988-b8ca-fdb05ff1b03b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1905bdbaf0>]}
+2021-10-31 14:48:15.844852 (MainThread): Found 26 models, 10 tests, 0 snapshots, 0 analyses, 184 macros, 0 operations, 0 seed files, 20 sources, 0 exposures
+2021-10-31 14:48:15.847910 (MainThread): 
+2021-10-31 14:48:15.848652 (MainThread): Acquiring new bigquery connection "master".
+2021-10-31 14:48:15.850125 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_indicium-academy-328121".
+2021-10-31 14:48:15.850579 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-10-31 14:48:17.124452 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_indicium-academy-328121_adventureworks".
+2021-10-31 14:48:17.125162 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-10-31 14:48:17.133219 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-10-31 14:48:18.300958 (MainThread): 11:48:18 | Concurrency: 1 threads (target='dev')
+2021-10-31 14:48:18.301956 (MainThread): 11:48:18 | 
+2021-10-31 14:48:18.319098 (Thread-1): Began running node model.adventure_works.dim_address
+2021-10-31 14:48:18.320483 (Thread-1): 11:48:18 | 1 of 1 START table model adventureworks.dim_address.................. [RUN]
+2021-10-31 14:48:18.322439 (Thread-1): Acquiring new bigquery connection "model.adventure_works.dim_address".
+2021-10-31 14:48:18.327886 (Thread-1): Compiling model.adventure_works.dim_address
+2021-10-31 14:48:18.354717 (Thread-1): Compiling model.adventure_works.stg_stateprovince
+2021-10-31 14:48:18.369581 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_stateprovince"
+2021-10-31 14:48:18.372300 (Thread-1): Compiling model.adventure_works.stg_countryregion
+2021-10-31 14:48:18.387231 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_countryregion"
+2021-10-31 14:48:18.389210 (Thread-1): Compiling model.adventure_works.stg_address
+2021-10-31 14:48:18.402717 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_address"
+2021-10-31 14:48:18.413819 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 45864, 0, 0), raddr=('2800:3f0:4001:834::200a', 443, 0, 0)>
+2021-10-31 14:48:18.414764 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 55332, 0, 0), raddr=('2800:3f0:4004:80b::200a', 443, 0, 0)>
+2021-10-31 14:48:18.415543 (Thread-1): unclosed <socket.socket fd=9, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 45870, 0, 0), raddr=('2800:3f0:4001:834::200a', 443, 0, 0)>
+2021-10-31 14:48:18.416275 (Thread-1): unclosed <socket.socket fd=8, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 55338, 0, 0), raddr=('2800:3f0:4004:80b::200a', 443, 0, 0)>
+2021-10-31 14:48:18.433364 (Thread-1): Writing injected SQL for node "model.adventure_works.dim_address"
+2021-10-31 14:48:18.434057 (Thread-1): finished collecting timing info
+2021-10-31 14:48:18.483102 (Thread-1): Writing runtime SQL for node "model.adventure_works.dim_address"
+2021-10-31 14:48:18.483761 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 14:48:18.490588 (Thread-1): On model.adventure_works.dim_address: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "model.adventure_works.dim_address"} */
+
+
+  create or replace table `indicium-academy-328121`.`adventureworks`.`dim_address`
+  
+  
+  OPTIONS()
+  as (
+    with
+     __dbt__cte__stg_stateprovince as (
+with
+    source as (
+        select
+            stateprovinceid,
+            name,
+            stateprovincecode,
+            countryregioncode,
+            territoryid,
+            isonlystateprovinceflag,
+            modifieddate,
+
+            rowguid,
+            _sdc_table_version,
+            _sdc_sequence,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`stateprovince`
+    )
+
+select * from source
+),  __dbt__cte__stg_countryregion as (
+with
+    source as (
+        select
+            countryregioncode,
+            name,
+            modifieddate,
+
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`countryregion`
+    )
+
+select * from source
+),  __dbt__cte__stg_address as (
+with
+    source as (
+        select 
+            addressid,
+            addressline1,
+            addressline2,
+            city,
+            stateprovinceid,
+            postalcode,
+            spatiallocation,
+            modifieddate,
+
+            rowguid,
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`address`
+    )
+
+select * from source
+),stateprovince as (
+        select *
+        from __dbt__cte__stg_stateprovince
+    ),
+    countryregion as (
+        select *
+        from __dbt__cte__stg_countryregion
+    ),
+    address as (
+        select
+            addressid as address_id,
+            addressline1 as address_line_1,
+            addressline2 as address_line_2,
+            city,
+            stateprovince.name as state_province_name,
+            countryregion.name as country_name
+        from __dbt__cte__stg_address as address
+        left join stateprovince on address.stateprovinceid = stateprovince.stateprovinceid
+        left join countryregion on
+            stateprovince.countryregioncode = countryregion.countryregioncode
+    )
+select * from address
+  );
+    
+2021-10-31 14:48:22.285790 (Thread-1): finished collecting timing info
+2021-10-31 14:48:22.287119 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83b085b6-3b49-4988-b8ca-fdb05ff1b03b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1905c21a90>]}
+2021-10-31 14:48:22.288191 (Thread-1): 11:48:22 | 1 of 1 OK created table model adventureworks.dim_address............. [CREATE TABLE (19.6k rows, 898.3 KB processed) in 3.97s]
+2021-10-31 14:48:22.288865 (Thread-1): Finished running node model.adventure_works.dim_address
+2021-10-31 14:48:22.292285 (MainThread): Acquiring new bigquery connection "master".
+2021-10-31 14:48:22.293570 (MainThread): 11:48:22 | 
+2021-10-31 14:48:22.295416 (MainThread): 11:48:22 | Finished running 1 table model in 6.45s.
+2021-10-31 14:48:22.298737 (MainThread): Connection 'master' was properly closed.
+2021-10-31 14:48:22.299324 (MainThread): Connection 'model.adventure_works.dim_address' was properly closed.
+2021-10-31 14:48:22.301443 (MainThread): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 55344, 0, 0), raddr=('2800:3f0:4004:80b::200a', 443, 0, 0)>
+2021-10-31 14:48:22.301932 (MainThread): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 45876, 0, 0), raddr=('2800:3f0:4001:834::200a', 443, 0, 0)>
+2021-10-31 14:48:22.314749 (MainThread): 
+2021-10-31 14:48:22.315265 (MainThread): Completed successfully
+2021-10-31 14:48:22.316210 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2021-10-31 14:48:22.317505 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1908c6edf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1905bbe820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1905bdbd60>]}
+2021-10-31 14:48:22.318138 (MainThread): Flushing usage events
+2021-10-31 14:49:21.546845 (MainThread): Running with dbt=0.21.0
+2021-10-31 14:49:22.111480 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/thiagosfig/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', select=['dim_address'], selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-10-31 14:49:22.112853 (MainThread): Tracking: tracking
+2021-10-31 14:49:22.147594 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e1555c130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e1269afd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e1269abe0>]}
+2021-10-31 14:49:22.164214 (MainThread): Partial parsing not enabled
+2021-10-31 14:49:22.239442 (MainThread): Parsing macros/catalog.sql
+2021-10-31 14:49:22.252288 (MainThread): Parsing macros/etc.sql
+2021-10-31 14:49:22.256171 (MainThread): Parsing macros/adapters.sql
+2021-10-31 14:49:22.289207 (MainThread): Parsing macros/materializations/incremental.sql
+2021-10-31 14:49:22.309926 (MainThread): Parsing macros/materializations/table.sql
+2021-10-31 14:49:22.325350 (MainThread): Parsing macros/materializations/copy.sql
+2021-10-31 14:49:22.329012 (MainThread): Parsing macros/materializations/seed.sql
+2021-10-31 14:49:22.333455 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-10-31 14:49:22.337379 (MainThread): Parsing macros/materializations/view.sql
+2021-10-31 14:49:22.340664 (MainThread): Parsing macros/core.sql
+2021-10-31 14:49:22.345628 (MainThread): Parsing macros/adapters/common.sql
+2021-10-31 14:49:22.423553 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-10-31 14:49:22.426457 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-10-31 14:49:22.429125 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-10-31 14:49:22.432333 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-10-31 14:49:22.436639 (MainThread): Parsing macros/etc/datetime.sql
+2021-10-31 14:49:22.449963 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-10-31 14:49:22.455168 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-10-31 14:49:22.458553 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-10-31 14:49:22.462230 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-10-31 14:49:22.465656 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-10-31 14:49:22.471051 (MainThread): Parsing macros/etc/query.sql
+2021-10-31 14:49:22.472991 (MainThread): Parsing macros/materializations/helpers.sql
+2021-10-31 14:49:22.490482 (MainThread): Parsing macros/materializations/test.sql
+2021-10-31 14:49:22.506141 (MainThread): Parsing macros/materializations/table/table.sql
+2021-10-31 14:49:22.522600 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-10-31 14:49:22.531635 (MainThread): Parsing macros/materializations/view/view.sql
+2021-10-31 14:49:22.547027 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-10-31 14:49:22.596202 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-10-31 14:49:22.628428 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-10-31 14:49:22.652948 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-10-31 14:49:22.657222 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-10-31 14:49:22.692116 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-10-31 14:49:22.696617 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-10-31 14:49:22.736493 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-10-31 14:49:23.229744 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_specialofferproduct".
+2021-10-31 14:49:23.258642 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_product".
+2021-10-31 14:49:23.267713 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesreason".
+2021-10-31 14:49:23.275788 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_stateprovince".
+2021-10-31 14:49:23.286548 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_department".
+2021-10-31 14:49:23.294022 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesorderdetail".
+2021-10-31 14:49:23.302040 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_store".
+2021-10-31 14:49:23.306392 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_employee".
+2021-10-31 14:49:23.311533 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_customer".
+2021-10-31 14:49:23.318982 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesperson".
+2021-10-31 14:49:23.325997 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_specialoffer".
+2021-10-31 14:49:23.334038 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_businessentityaddress".
+2021-10-31 14:49:23.340979 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesorderheader".
+2021-10-31 14:49:23.347812 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_countryregion".
+2021-10-31 14:49:23.352629 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_address".
+2021-10-31 14:49:23.357076 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_shipmethod".
+2021-10-31 14:49:23.362201 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_creditcard".
+2021-10-31 14:49:23.367324 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_businessentity".
+2021-10-31 14:49:23.371602 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesorderheadersalesreason".
+2021-10-31 14:49:23.376046 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_person".
+2021-10-31 14:49:23.381630 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_address".
+2021-10-31 14:49:23.386552 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_customer".
+2021-10-31 14:49:23.391058 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_product".
+2021-10-31 14:49:23.396784 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_special_offer".
+2021-10-31 14:49:23.401714 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_employee".
+2021-10-31 14:49:23.406246 (MainThread): Acquiring new bigquery connection "model.adventure_works.fact_sale".
+2021-10-31 14:49:23.535475 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '072fa436-5ecb-44d3-b2f8-b4a9fc558fbb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e12535e80>]}
+2021-10-31 14:49:23.547569 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '072fa436-5ecb-44d3-b2f8-b4a9fc558fbb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e125359d0>]}
+2021-10-31 14:49:23.548319 (MainThread): Found 26 models, 10 tests, 0 snapshots, 0 analyses, 184 macros, 0 operations, 0 seed files, 20 sources, 0 exposures
+2021-10-31 14:49:23.551325 (MainThread): 
+2021-10-31 14:49:23.551974 (MainThread): Acquiring new bigquery connection "master".
+2021-10-31 14:49:23.553442 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_indicium-academy-328121".
+2021-10-31 14:49:23.553899 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-10-31 14:49:24.737482 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "create_indicium-academy-328121_adventureworks_marts".
+2021-10-31 14:49:24.743024 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "create_indicium-academy-328121_adventureworks_marts".
+2021-10-31 14:49:24.747061 (ThreadPoolExecutor-0_0): Creating schema "indicium-academy-328121.adventureworks_marts".
+2021-10-31 14:49:24.748597 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state closed
+2021-10-31 14:49:24.777139 (ThreadPoolExecutor-0_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-10-31 14:49:26.288843 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_indicium-academy-328121_adventureworks_marts".
+2021-10-31 14:49:26.290159 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-10-31 14:49:26.308064 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-10-31 14:49:26.421958 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=8, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 55498, 0, 0), raddr=('2800:3f0:4004:80b::200a', 443, 0, 0)>
+2021-10-31 14:49:26.423240 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=9, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 46030, 0, 0), raddr=('2800:3f0:4001:834::200a', 443, 0, 0)>
+2021-10-31 14:49:27.500093 (MainThread): 11:49:27 | Concurrency: 1 threads (target='dev')
+2021-10-31 14:49:27.501783 (MainThread): 11:49:27 | 
+2021-10-31 14:49:27.512236 (Thread-1): Began running node model.adventure_works.dim_address
+2021-10-31 14:49:27.516767 (Thread-1): 11:49:27 | 1 of 1 START table model adventureworks_marts.dim_address............ [RUN]
+2021-10-31 14:49:27.520444 (Thread-1): Acquiring new bigquery connection "model.adventure_works.dim_address".
+2021-10-31 14:49:27.521958 (Thread-1): Compiling model.adventure_works.dim_address
+2021-10-31 14:49:27.557593 (Thread-1): Compiling model.adventure_works.stg_stateprovince
+2021-10-31 14:49:27.575731 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_stateprovince"
+2021-10-31 14:49:27.579015 (Thread-1): Compiling model.adventure_works.stg_countryregion
+2021-10-31 14:49:27.594337 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_countryregion"
+2021-10-31 14:49:27.597146 (Thread-1): Compiling model.adventure_works.stg_address
+2021-10-31 14:49:27.602641 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 46024, 0, 0), raddr=('2800:3f0:4001:834::200a', 443, 0, 0)>
+2021-10-31 14:49:27.603718 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 55490, 0, 0), raddr=('2800:3f0:4004:80b::200a', 443, 0, 0)>
+2021-10-31 14:49:27.607800 (Thread-1): unclosed <socket.socket fd=10, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 55504, 0, 0), raddr=('2800:3f0:4004:80b::200a', 443, 0, 0)>
+2021-10-31 14:49:27.608395 (Thread-1): unclosed <socket.socket fd=8, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 46036, 0, 0), raddr=('2800:3f0:4001:834::200a', 443, 0, 0)>
+2021-10-31 14:49:27.611684 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_address"
+2021-10-31 14:49:27.630418 (Thread-1): Writing injected SQL for node "model.adventure_works.dim_address"
+2021-10-31 14:49:27.631263 (Thread-1): finished collecting timing info
+2021-10-31 14:49:27.673285 (Thread-1): Writing runtime SQL for node "model.adventure_works.dim_address"
+2021-10-31 14:49:27.673774 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 14:49:27.678628 (Thread-1): On model.adventure_works.dim_address: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "model.adventure_works.dim_address"} */
+
+
+  create or replace table `indicium-academy-328121`.`adventureworks_marts`.`dim_address`
+  
+  
+  OPTIONS()
+  as (
+    with
+     __dbt__cte__stg_stateprovince as (
+with
+    source as (
+        select
+            stateprovinceid,
+            name,
+            stateprovincecode,
+            countryregioncode,
+            territoryid,
+            isonlystateprovinceflag,
+            modifieddate,
+
+            rowguid,
+            _sdc_table_version,
+            _sdc_sequence,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`stateprovince`
+    )
+
+select * from source
+),  __dbt__cte__stg_countryregion as (
+with
+    source as (
+        select
+            countryregioncode,
+            name,
+            modifieddate,
+
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`countryregion`
+    )
+
+select * from source
+),  __dbt__cte__stg_address as (
+with
+    source as (
+        select 
+            addressid,
+            addressline1,
+            addressline2,
+            city,
+            stateprovinceid,
+            postalcode,
+            spatiallocation,
+            modifieddate,
+
+            rowguid,
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`address`
+    )
+
+select * from source
+),stateprovince as (
+        select *
+        from __dbt__cte__stg_stateprovince
+    ),
+    countryregion as (
+        select *
+        from __dbt__cte__stg_countryregion
+    ),
+    address as (
+        select
+            addressid as address_id,
+            addressline1 as address_line_1,
+            addressline2 as address_line_2,
+            city,
+            stateprovince.name as state_province_name,
+            countryregion.name as country_name
+        from __dbt__cte__stg_address as address
+        left join stateprovince on address.stateprovinceid = stateprovince.stateprovinceid
+        left join countryregion on
+            stateprovince.countryregioncode = countryregion.countryregioncode
+    )
+select * from address
+  );
+    
+2021-10-31 14:49:31.776345 (Thread-1): finished collecting timing info
+2021-10-31 14:49:31.776911 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '072fa436-5ecb-44d3-b2f8-b4a9fc558fbb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e12537a30>]}
+2021-10-31 14:49:31.777426 (Thread-1): 11:49:31 | 1 of 1 OK created table model adventureworks_marts.dim_address....... [CREATE TABLE (19.6k rows, 898.3 KB processed) in 4.26s]
+2021-10-31 14:49:31.777793 (Thread-1): Finished running node model.adventure_works.dim_address
+2021-10-31 14:49:31.780066 (MainThread): Acquiring new bigquery connection "master".
+2021-10-31 14:49:31.780785 (MainThread): 11:49:31 | 
+2021-10-31 14:49:31.781585 (MainThread): 11:49:31 | Finished running 1 table model in 8.23s.
+2021-10-31 14:49:31.782115 (MainThread): Connection 'master' was properly closed.
+2021-10-31 14:49:31.782395 (MainThread): Connection 'model.adventure_works.dim_address' was properly closed.
+2021-10-31 14:49:31.792490 (MainThread): 
+2021-10-31 14:49:31.793022 (MainThread): Completed successfully
+2021-10-31 14:49:31.793583 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2021-10-31 14:49:31.794154 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e155cadc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e1251d790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e125f1bb0>]}
+2021-10-31 14:49:31.795180 (MainThread): Flushing usage events
+2021-10-31 14:50:15.012869 (MainThread): Running with dbt=0.21.0
+2021-10-31 14:50:15.743780 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/thiagosfig/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-10-31 14:50:15.745354 (MainThread): Tracking: tracking
+2021-10-31 14:50:15.785645 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f62e8103fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f62eb031850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f62e8119130>]}
+2021-10-31 14:50:15.810582 (MainThread): Partial parsing not enabled
+2021-10-31 14:50:15.838425 (MainThread): Parsing macros/catalog.sql
+2021-10-31 14:50:15.847987 (MainThread): Parsing macros/etc.sql
+2021-10-31 14:50:15.851738 (MainThread): Parsing macros/adapters.sql
+2021-10-31 14:50:15.889618 (MainThread): Parsing macros/materializations/incremental.sql
+2021-10-31 14:50:15.920385 (MainThread): Parsing macros/materializations/table.sql
+2021-10-31 14:50:15.936920 (MainThread): Parsing macros/materializations/copy.sql
+2021-10-31 14:50:15.942459 (MainThread): Parsing macros/materializations/seed.sql
+2021-10-31 14:50:15.946671 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-10-31 14:50:15.951167 (MainThread): Parsing macros/materializations/view.sql
+2021-10-31 14:50:15.956880 (MainThread): Parsing macros/core.sql
+2021-10-31 14:50:15.966800 (MainThread): Parsing macros/adapters/common.sql
+2021-10-31 14:50:16.068173 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-10-31 14:50:16.073425 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-10-31 14:50:16.076386 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-10-31 14:50:16.077934 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-10-31 14:50:16.079897 (MainThread): Parsing macros/etc/datetime.sql
+2021-10-31 14:50:16.095581 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-10-31 14:50:16.098182 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-10-31 14:50:16.101466 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-10-31 14:50:16.106608 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-10-31 14:50:16.109978 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-10-31 14:50:16.113319 (MainThread): Parsing macros/etc/query.sql
+2021-10-31 14:50:16.115717 (MainThread): Parsing macros/materializations/helpers.sql
+2021-10-31 14:50:16.139802 (MainThread): Parsing macros/materializations/test.sql
+2021-10-31 14:50:16.155896 (MainThread): Parsing macros/materializations/table/table.sql
+2021-10-31 14:50:16.172001 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-10-31 14:50:16.180979 (MainThread): Parsing macros/materializations/view/view.sql
+2021-10-31 14:50:16.197324 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-10-31 14:50:16.248360 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-10-31 14:50:16.275133 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-10-31 14:50:16.302208 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-10-31 14:50:16.305823 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-10-31 14:50:16.357335 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-10-31 14:50:16.360770 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-10-31 14:50:16.395291 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-10-31 14:50:16.882897 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_specialofferproduct".
+2021-10-31 14:50:16.898476 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_product".
+2021-10-31 14:50:16.903868 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesreason".
+2021-10-31 14:50:16.908360 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_stateprovince".
+2021-10-31 14:50:16.912860 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_department".
+2021-10-31 14:50:16.919179 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesorderdetail".
+2021-10-31 14:50:16.923774 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_store".
+2021-10-31 14:50:16.928233 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_employee".
+2021-10-31 14:50:16.954185 (MainThread): 1699: statically parsed staging/stg_customer.sql
+2021-10-31 14:50:16.954514 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_customer".
+2021-10-31 14:50:16.957915 (MainThread): Sending event: {'category': 'dbt', 'action': 'experimental_parser', 'label': 'c80b6eb2-d7d5-4761-94ee-a78216860c18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f62e7f8d9a0>]}
+2021-10-31 14:50:16.959320 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesperson".
+2021-10-31 14:50:16.963634 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_specialoffer".
+2021-10-31 14:50:16.970060 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_businessentityaddress".
+2021-10-31 14:50:16.974567 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesorderheader".
+2021-10-31 14:50:16.980056 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_countryregion".
+2021-10-31 14:50:16.986210 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_address".
+2021-10-31 14:50:16.990748 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_shipmethod".
+2021-10-31 14:50:16.995286 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_creditcard".
+2021-10-31 14:50:17.001088 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_businessentity".
+2021-10-31 14:50:17.007210 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesorderheadersalesreason".
+2021-10-31 14:50:17.013296 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_person".
+2021-10-31 14:50:17.019695 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_address".
+2021-10-31 14:50:17.026559 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_customer".
+2021-10-31 14:50:17.031836 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_product".
+2021-10-31 14:50:17.039061 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_special_offer".
+2021-10-31 14:50:17.044821 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_employee".
+2021-10-31 14:50:17.051347 (MainThread): Acquiring new bigquery connection "model.adventure_works.fact_sale".
+2021-10-31 14:50:17.208820 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c80b6eb2-d7d5-4761-94ee-a78216860c18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f62e7fa05e0>]}
+2021-10-31 14:50:17.222987 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c80b6eb2-d7d5-4761-94ee-a78216860c18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f62e7fa02e0>]}
+2021-10-31 14:50:17.223677 (MainThread): Found 26 models, 10 tests, 0 snapshots, 0 analyses, 184 macros, 0 operations, 0 seed files, 20 sources, 0 exposures
+2021-10-31 14:50:17.228457 (MainThread): 
+2021-10-31 14:50:17.229079 (MainThread): Acquiring new bigquery connection "master".
+2021-10-31 14:50:17.231146 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_indicium-academy-328121".
+2021-10-31 14:50:17.231642 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-10-31 14:50:18.381457 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_indicium-academy-328121_adventureworks_marts".
+2021-10-31 14:50:18.382703 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-10-31 14:50:18.389048 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-10-31 14:50:19.577667 (MainThread): 11:50:19 | Concurrency: 1 threads (target='dev')
+2021-10-31 14:50:19.578708 (MainThread): 11:50:19 | 
+2021-10-31 14:50:19.592632 (Thread-1): Began running node model.adventure_works.stg_address
+2021-10-31 14:50:19.594608 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_address".
+2021-10-31 14:50:19.596077 (Thread-1): Compiling model.adventure_works.stg_address
+2021-10-31 14:50:19.617507 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_address"
+2021-10-31 14:50:19.620617 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.621862 (Thread-1): Finished running node model.adventure_works.stg_address
+2021-10-31 14:50:19.622396 (Thread-1): Began running node model.adventure_works.stg_businessentity
+2021-10-31 14:50:19.623444 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_businessentity".
+2021-10-31 14:50:19.623885 (Thread-1): Compiling model.adventure_works.stg_businessentity
+2021-10-31 14:50:19.628282 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_businessentity"
+2021-10-31 14:50:19.628946 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.629824 (Thread-1): Finished running node model.adventure_works.stg_businessentity
+2021-10-31 14:50:19.630274 (Thread-1): Began running node model.adventure_works.stg_businessentityaddress
+2021-10-31 14:50:19.631759 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_businessentityaddress".
+2021-10-31 14:50:19.632223 (Thread-1): Compiling model.adventure_works.stg_businessentityaddress
+2021-10-31 14:50:19.636848 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_businessentityaddress"
+2021-10-31 14:50:19.637395 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.638091 (Thread-1): Finished running node model.adventure_works.stg_businessentityaddress
+2021-10-31 14:50:19.638456 (Thread-1): Began running node model.adventure_works.stg_countryregion
+2021-10-31 14:50:19.639023 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_countryregion".
+2021-10-31 14:50:19.639538 (Thread-1): Compiling model.adventure_works.stg_countryregion
+2021-10-31 14:50:19.642592 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_countryregion"
+2021-10-31 14:50:19.643113 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.643743 (Thread-1): Finished running node model.adventure_works.stg_countryregion
+2021-10-31 14:50:19.644068 (Thread-1): Began running node model.adventure_works.stg_creditcard
+2021-10-31 14:50:19.644602 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_creditcard".
+2021-10-31 14:50:19.644888 (Thread-1): Compiling model.adventure_works.stg_creditcard
+2021-10-31 14:50:19.646566 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 55626, 0, 0), raddr=('2800:3f0:4004:80b::200a', 443, 0, 0)>
+2021-10-31 14:50:19.646958 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 46158, 0, 0), raddr=('2800:3f0:4001:834::200a', 443, 0, 0)>
+2021-10-31 14:50:19.647685 (Thread-1): unclosed <socket.socket fd=9, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 46164, 0, 0), raddr=('2800:3f0:4001:834::200a', 443, 0, 0)>
+2021-10-31 14:50:19.648286 (Thread-1): unclosed <socket.socket fd=8, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 55632, 0, 0), raddr=('2800:3f0:4004:80b::200a', 443, 0, 0)>
+2021-10-31 14:50:19.651586 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_creditcard"
+2021-10-31 14:50:19.652042 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.652741 (Thread-1): Finished running node model.adventure_works.stg_creditcard
+2021-10-31 14:50:19.653093 (Thread-1): Began running node model.adventure_works.stg_customer
+2021-10-31 14:50:19.653583 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_customer".
+2021-10-31 14:50:19.653862 (Thread-1): Compiling model.adventure_works.stg_customer
+2021-10-31 14:50:19.657039 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_customer"
+2021-10-31 14:50:19.657470 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.658157 (Thread-1): Finished running node model.adventure_works.stg_customer
+2021-10-31 14:50:19.658560 (Thread-1): Began running node model.adventure_works.stg_department
+2021-10-31 14:50:19.659175 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_department".
+2021-10-31 14:50:19.659540 (Thread-1): Compiling model.adventure_works.stg_department
+2021-10-31 14:50:19.662350 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_department"
+2021-10-31 14:50:19.662896 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.663635 (Thread-1): Finished running node model.adventure_works.stg_department
+2021-10-31 14:50:19.664512 (Thread-1): Began running node model.adventure_works.stg_employee
+2021-10-31 14:50:19.665348 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_employee".
+2021-10-31 14:50:19.665787 (Thread-1): Compiling model.adventure_works.stg_employee
+2021-10-31 14:50:19.669694 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_employee"
+2021-10-31 14:50:19.670140 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.670828 (Thread-1): Finished running node model.adventure_works.stg_employee
+2021-10-31 14:50:19.671233 (Thread-1): Began running node model.adventure_works.stg_person
+2021-10-31 14:50:19.671953 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_person".
+2021-10-31 14:50:19.672319 (Thread-1): Compiling model.adventure_works.stg_person
+2021-10-31 14:50:19.675281 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_person"
+2021-10-31 14:50:19.675723 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.676414 (Thread-1): Finished running node model.adventure_works.stg_person
+2021-10-31 14:50:19.676816 (Thread-1): Began running node model.adventure_works.stg_product
+2021-10-31 14:50:19.677565 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_product".
+2021-10-31 14:50:19.677850 (Thread-1): Compiling model.adventure_works.stg_product
+2021-10-31 14:50:19.680399 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_product"
+2021-10-31 14:50:19.681232 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.681828 (Thread-1): Finished running node model.adventure_works.stg_product
+2021-10-31 14:50:19.682289 (Thread-1): Began running node model.adventure_works.stg_salesorderdetail
+2021-10-31 14:50:19.683132 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_salesorderdetail".
+2021-10-31 14:50:19.683543 (Thread-1): Compiling model.adventure_works.stg_salesorderdetail
+2021-10-31 14:50:19.686763 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_salesorderdetail"
+2021-10-31 14:50:19.687144 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.687697 (Thread-1): Finished running node model.adventure_works.stg_salesorderdetail
+2021-10-31 14:50:19.688031 (Thread-1): Began running node model.adventure_works.stg_salesorderheader
+2021-10-31 14:50:19.688539 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_salesorderheader".
+2021-10-31 14:50:19.688761 (Thread-1): Compiling model.adventure_works.stg_salesorderheader
+2021-10-31 14:50:19.692560 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_salesorderheader"
+2021-10-31 14:50:19.693133 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.693858 (Thread-1): Finished running node model.adventure_works.stg_salesorderheader
+2021-10-31 14:50:19.694297 (Thread-1): Began running node model.adventure_works.stg_salesorderheadersalesreason
+2021-10-31 14:50:19.694944 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_salesorderheadersalesreason".
+2021-10-31 14:50:19.695320 (Thread-1): Compiling model.adventure_works.stg_salesorderheadersalesreason
+2021-10-31 14:50:19.699663 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_salesorderheadersalesreason"
+2021-10-31 14:50:19.700281 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.701331 (Thread-1): Finished running node model.adventure_works.stg_salesorderheadersalesreason
+2021-10-31 14:50:19.702047 (Thread-1): Began running node model.adventure_works.stg_salesperson
+2021-10-31 14:50:19.702758 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_salesperson".
+2021-10-31 14:50:19.703031 (Thread-1): Compiling model.adventure_works.stg_salesperson
+2021-10-31 14:50:19.705761 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_salesperson"
+2021-10-31 14:50:19.706194 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.706748 (Thread-1): Finished running node model.adventure_works.stg_salesperson
+2021-10-31 14:50:19.707048 (Thread-1): Began running node model.adventure_works.stg_salesreason
+2021-10-31 14:50:19.707533 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_salesreason".
+2021-10-31 14:50:19.707769 (Thread-1): Compiling model.adventure_works.stg_salesreason
+2021-10-31 14:50:19.710444 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_salesreason"
+2021-10-31 14:50:19.710942 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.711786 (Thread-1): Finished running node model.adventure_works.stg_salesreason
+2021-10-31 14:50:19.712301 (Thread-1): Began running node model.adventure_works.stg_shipmethod
+2021-10-31 14:50:19.713179 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_shipmethod".
+2021-10-31 14:50:19.713653 (Thread-1): Compiling model.adventure_works.stg_shipmethod
+2021-10-31 14:50:19.719085 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_shipmethod"
+2021-10-31 14:50:19.719715 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.720472 (Thread-1): Finished running node model.adventure_works.stg_shipmethod
+2021-10-31 14:50:19.720932 (Thread-1): Began running node model.adventure_works.stg_specialoffer
+2021-10-31 14:50:19.721697 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_specialoffer".
+2021-10-31 14:50:19.722080 (Thread-1): Compiling model.adventure_works.stg_specialoffer
+2021-10-31 14:50:19.726086 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_specialoffer"
+2021-10-31 14:50:19.726699 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.727451 (Thread-1): Finished running node model.adventure_works.stg_specialoffer
+2021-10-31 14:50:19.727929 (Thread-1): Began running node model.adventure_works.stg_specialofferproduct
+2021-10-31 14:50:19.729194 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_specialofferproduct".
+2021-10-31 14:50:19.729589 (Thread-1): Compiling model.adventure_works.stg_specialofferproduct
+2021-10-31 14:50:19.733563 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_specialofferproduct"
+2021-10-31 14:50:19.734685 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.735612 (Thread-1): Finished running node model.adventure_works.stg_specialofferproduct
+2021-10-31 14:50:19.736089 (Thread-1): Began running node model.adventure_works.stg_stateprovince
+2021-10-31 14:50:19.736848 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_stateprovince".
+2021-10-31 14:50:19.737222 (Thread-1): Compiling model.adventure_works.stg_stateprovince
+2021-10-31 14:50:19.740699 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_stateprovince"
+2021-10-31 14:50:19.741181 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.741885 (Thread-1): Finished running node model.adventure_works.stg_stateprovince
+2021-10-31 14:50:19.742291 (Thread-1): Began running node model.adventure_works.stg_store
+2021-10-31 14:50:19.742993 (Thread-1): Acquiring new bigquery connection "model.adventure_works.stg_store".
+2021-10-31 14:50:19.743488 (Thread-1): Compiling model.adventure_works.stg_store
+2021-10-31 14:50:19.748561 (Thread-1): Writing injected SQL for node "model.adventure_works.stg_store"
+2021-10-31 14:50:19.749019 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.749943 (Thread-1): Finished running node model.adventure_works.stg_store
+2021-10-31 14:50:19.750459 (Thread-1): Began running node model.adventure_works.dim_customer
+2021-10-31 14:50:19.751451 (Thread-1): 11:50:19 | 1 of 6 START table model adventureworks_marts.dim_customer........... [RUN]
+2021-10-31 14:50:19.752310 (Thread-1): Acquiring new bigquery connection "model.adventure_works.dim_customer".
+2021-10-31 14:50:19.752751 (Thread-1): Compiling model.adventure_works.dim_customer
+2021-10-31 14:50:19.774171 (Thread-1): Writing injected SQL for node "model.adventure_works.dim_customer"
+2021-10-31 14:50:19.774570 (Thread-1): finished collecting timing info
+2021-10-31 14:50:19.815639 (Thread-1): Writing runtime SQL for node "model.adventure_works.dim_customer"
+2021-10-31 14:50:19.816332 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 14:50:19.821207 (Thread-1): On model.adventure_works.dim_customer: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "model.adventure_works.dim_customer"} */
+
+
+  create or replace table `indicium-academy-328121`.`adventureworks_marts`.`dim_customer`
+  
+  
+  OPTIONS()
+  as (
+    with
+     __dbt__cte__stg_person as (
+with
+    source as (
+        select
+            businessentityid as personid,
+            persontype,
+            namestyle,
+            title,
+            firstname,
+            middlename,
+            lastname,
+            suffix,
+            emailpromotion,
+            modifieddate,
+
+            rowguid,
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`person`
+    )
+
+select * from source
+),  __dbt__cte__stg_customer as (
+with
+    source as (
+        select
+            customerid,
+            personid,
+            storeid,
+            territoryid,
+            modifieddate,
+
+            rowguid,
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`customer`
+    )
+
+select * from source
+),person as (
+        select *
+        from __dbt__cte__stg_person
+    ),
+    customer as (
+        select
+            customerid as customer_id,
+            person.persontype as person_type,
+            person.firstname as first_name,
+            person.middlename as middle_name,
+            person.lastname as last_name,
+        from __dbt__cte__stg_customer as customer
+        left join person on customer.personid = person.personid
+    )
+
+select * from customer
+  );
+    
+2021-10-31 14:50:23.861041 (Thread-1): finished collecting timing info
+2021-10-31 14:50:23.862933 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c80b6eb2-d7d5-4761-94ee-a78216860c18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f62e80469d0>]}
+2021-10-31 14:50:23.864128 (Thread-1): 11:50:23 | 1 of 6 OK created table model adventureworks_marts.dim_customer...... [CREATE TABLE (19.8k rows, 875.2 KB processed) in 4.11s]
+2021-10-31 14:50:23.865275 (Thread-1): Finished running node model.adventure_works.dim_customer
+2021-10-31 14:50:23.866257 (Thread-1): Began running node model.adventure_works.dim_employee
+2021-10-31 14:50:23.867611 (Thread-1): 11:50:23 | 2 of 6 START table model adventureworks_marts.dim_employee........... [RUN]
+2021-10-31 14:50:23.869598 (Thread-1): Acquiring new bigquery connection "model.adventure_works.dim_employee".
+2021-10-31 14:50:23.870946 (Thread-1): Compiling model.adventure_works.dim_employee
+2021-10-31 14:50:23.872873 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 55640, 0, 0), raddr=('2800:3f0:4004:80b::200a', 443, 0, 0)>
+2021-10-31 14:50:23.873401 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 46172, 0, 0), raddr=('2800:3f0:4001:834::200a', 443, 0, 0)>
+2021-10-31 14:50:23.892304 (Thread-1): Writing injected SQL for node "model.adventure_works.dim_employee"
+2021-10-31 14:50:23.892840 (Thread-1): finished collecting timing info
+2021-10-31 14:50:23.897326 (Thread-1): Writing runtime SQL for node "model.adventure_works.dim_employee"
+2021-10-31 14:50:23.897987 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 14:50:23.904359 (Thread-1): On model.adventure_works.dim_employee: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "model.adventure_works.dim_employee"} */
+
+
+  create or replace table `indicium-academy-328121`.`adventureworks_marts`.`dim_employee`
+  
+  
+  OPTIONS()
+  as (
+    with
+     __dbt__cte__stg_person as (
+with
+    source as (
+        select
+            businessentityid as personid,
+            persontype,
+            namestyle,
+            title,
+            firstname,
+            middlename,
+            lastname,
+            suffix,
+            emailpromotion,
+            modifieddate,
+
+            rowguid,
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`person`
+    )
+
+select * from source
+),  __dbt__cte__stg_employee as (
+with
+    source as (
+        select
+            businessentityid as employeeid,
+            nationalidnumber,
+            loginid,
+            jobtitle,
+            currentflag,
+            salariedflag,
+            hiredate,
+            gender,
+            birthdate,
+            maritalstatus,
+            vacationhours,
+            sickleavehours,
+            organizationnode,
+            modifieddate,
+
+            rowguid,
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`employee`
+    )
+
+select * from source
+),person as (
+        select *
+        from __dbt__cte__stg_person
+    ),
+    employee as (
+        select
+            employeeid as employee_id,
+            person.persontype as person_type,
+            person.firstname as first_name,
+            person.middlename as middle_name,
+            person.lastname as last_name,
+            hiredate as hire_date,
+        from __dbt__cte__stg_employee as employee
+        left join person on employee.employeeid = person.personid
+    )
+
+select * from employee
+  );
+    
+2021-10-31 14:50:27.723252 (Thread-1): finished collecting timing info
+2021-10-31 14:50:27.725813 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c80b6eb2-d7d5-4761-94ee-a78216860c18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f62e80469d0>]}
+2021-10-31 14:50:27.728102 (Thread-1): 11:50:27 | 2 of 6 OK created table model adventureworks_marts.dim_employee...... [CREATE TABLE (290.0 rows, 575.5 KB processed) in 3.86s]
+2021-10-31 14:50:27.729531 (Thread-1): Finished running node model.adventure_works.dim_employee
+2021-10-31 14:50:27.731618 (Thread-1): Began running node model.adventure_works.dim_product
+2021-10-31 14:50:27.734567 (Thread-1): 11:50:27 | 3 of 6 START table model adventureworks_marts.dim_product............ [RUN]
+2021-10-31 14:50:27.739375 (Thread-1): Acquiring new bigquery connection "model.adventure_works.dim_product".
+2021-10-31 14:50:27.740634 (Thread-1): Compiling model.adventure_works.dim_product
+2021-10-31 14:50:27.744482 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 55652, 0, 0), raddr=('2800:3f0:4004:80b::200a', 443, 0, 0)>
+2021-10-31 14:50:27.745561 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 46184, 0, 0), raddr=('2800:3f0:4001:834::200a', 443, 0, 0)>
+2021-10-31 14:50:27.767955 (Thread-1): Writing injected SQL for node "model.adventure_works.dim_product"
+2021-10-31 14:50:27.769160 (Thread-1): finished collecting timing info
+2021-10-31 14:50:27.773018 (Thread-1): Writing runtime SQL for node "model.adventure_works.dim_product"
+2021-10-31 14:50:27.773586 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 14:50:27.779095 (Thread-1): On model.adventure_works.dim_product: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "model.adventure_works.dim_product"} */
+
+
+  create or replace table `indicium-academy-328121`.`adventureworks_marts`.`dim_product`
+  
+  
+  OPTIONS()
+  as (
+    with
+     __dbt__cte__stg_product as (
+with
+    source as (
+        select
+            productid,
+            name,
+            productnumber,
+            productmodelid,
+            productsubcategoryid,
+            standardcost,
+            listprice,
+            daystomanufacture,
+            productline,
+            safetystocklevel,
+            makeflag,
+            finishedgoodsflag,
+            class,
+            reorderpoint,
+            color,
+            style,
+            size,
+            sizeunitmeasurecode,
+            weight,
+            weightunitmeasurecode,
+            sellstartdate,
+            sellenddate,
+            modifieddate,
+
+            rowguid,
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`product`
+    )
+
+select * from source
+),product as (
+        select
+            productid as product_id,
+            name,
+            productnumber as product_number,
+            color,
+            size,
+            daystomanufacture as days_to_manufacture,
+            productline as product_line,
+            sellstartdate as sell_start_date,
+            sellenddate as sell_end_date,
+        from __dbt__cte__stg_product as product
+    )
+
+select * from product
+  );
+    
+2021-10-31 14:50:31.558568 (Thread-1): finished collecting timing info
+2021-10-31 14:50:31.560846 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c80b6eb2-d7d5-4761-94ee-a78216860c18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f62e7fcf2b0>]}
+2021-10-31 14:50:31.563324 (Thread-1): 11:50:31 | 3 of 6 OK created table model adventureworks_marts.dim_product....... [CREATE TABLE (504.0 rows, 31.3 KB processed) in 3.82s]
+2021-10-31 14:50:31.564828 (Thread-1): Finished running node model.adventure_works.dim_product
+2021-10-31 14:50:31.567193 (Thread-1): Began running node model.adventure_works.dim_special_offer
+2021-10-31 14:50:31.570002 (Thread-1): 11:50:31 | 4 of 6 START table model adventureworks_marts.dim_special_offer...... [RUN]
+2021-10-31 14:50:31.574758 (Thread-1): Acquiring new bigquery connection "model.adventure_works.dim_special_offer".
+2021-10-31 14:50:31.575775 (Thread-1): Compiling model.adventure_works.dim_special_offer
+2021-10-31 14:50:31.596522 (Thread-1): Writing injected SQL for node "model.adventure_works.dim_special_offer"
+2021-10-31 14:50:31.597101 (Thread-1): finished collecting timing info
+2021-10-31 14:50:31.605347 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 55664, 0, 0), raddr=('2800:3f0:4004:80b::200a', 443, 0, 0)>
+2021-10-31 14:50:31.605980 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 46196, 0, 0), raddr=('2800:3f0:4001:834::200a', 443, 0, 0)>
+2021-10-31 14:50:31.610370 (Thread-1): Writing runtime SQL for node "model.adventure_works.dim_special_offer"
+2021-10-31 14:50:31.611128 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 14:50:31.616230 (Thread-1): On model.adventure_works.dim_special_offer: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "model.adventure_works.dim_special_offer"} */
+
+
+  create or replace table `indicium-academy-328121`.`adventureworks_marts`.`dim_special_offer`
+  
+  
+  OPTIONS()
+  as (
+    with
+     __dbt__cte__stg_specialoffer as (
+with
+    source as (
+        select
+            specialofferid,
+            description,
+            discountpct,
+            type,
+            category,
+            startdate,
+            enddate,
+            minqty,
+            maxqty,
+            modifieddate,
+
+            rowguid,
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`specialoffer`
+    )
+
+select * from source
+),special_offer as (
+        select
+            specialofferid as special_offer_id,
+            description,
+            discountpct as discount_percentage,
+            type,
+            category,
+            startdate as start_date,
+            enddate as end_date,
+        from __dbt__cte__stg_specialoffer as special_offer
+    )
+
+select * from special_offer
+  );
+    
+2021-10-31 14:50:34.646463 (Thread-1): finished collecting timing info
+2021-10-31 14:50:34.648644 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c80b6eb2-d7d5-4761-94ee-a78216860c18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f62e55b0760>]}
+2021-10-31 14:50:34.651301 (Thread-1): 11:50:34 | 4 of 6 OK created table model adventureworks_marts.dim_special_offer. [CREATE TABLE (16.0 rows, 1.4 KB processed) in 3.07s]
+2021-10-31 14:50:34.653585 (Thread-1): Finished running node model.adventure_works.dim_special_offer
+2021-10-31 14:50:34.656141 (Thread-1): Began running node model.adventure_works.dim_address
+2021-10-31 14:50:34.658257 (Thread-1): 11:50:34 | 5 of 6 START table model adventureworks_marts.dim_address............ [RUN]
+2021-10-31 14:50:34.660453 (Thread-1): Acquiring new bigquery connection "model.adventure_works.dim_address".
+2021-10-31 14:50:34.661705 (Thread-1): Compiling model.adventure_works.dim_address
+2021-10-31 14:50:34.694576 (Thread-1): Writing injected SQL for node "model.adventure_works.dim_address"
+2021-10-31 14:50:34.695319 (Thread-1): finished collecting timing info
+2021-10-31 14:50:34.699201 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 14:50:34.704331 (Thread-1): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-10-31 14:50:35.859664 (Thread-1): Writing runtime SQL for node "model.adventure_works.dim_address"
+2021-10-31 14:50:35.861226 (Thread-1): On model.adventure_works.dim_address: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "model.adventure_works.dim_address"} */
+
+
+  create or replace table `indicium-academy-328121`.`adventureworks_marts`.`dim_address`
+  
+  
+  OPTIONS()
+  as (
+    with
+     __dbt__cte__stg_stateprovince as (
+with
+    source as (
+        select
+            stateprovinceid,
+            name,
+            stateprovincecode,
+            countryregioncode,
+            territoryid,
+            isonlystateprovinceflag,
+            modifieddate,
+
+            rowguid,
+            _sdc_table_version,
+            _sdc_sequence,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`stateprovince`
+    )
+
+select * from source
+),  __dbt__cte__stg_countryregion as (
+with
+    source as (
+        select
+            countryregioncode,
+            name,
+            modifieddate,
+
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`countryregion`
+    )
+
+select * from source
+),  __dbt__cte__stg_address as (
+with
+    source as (
+        select 
+            addressid,
+            addressline1,
+            addressline2,
+            city,
+            stateprovinceid,
+            postalcode,
+            spatiallocation,
+            modifieddate,
+
+            rowguid,
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`address`
+    )
+
+select * from source
+),stateprovince as (
+        select *
+        from __dbt__cte__stg_stateprovince
+    ),
+    countryregion as (
+        select *
+        from __dbt__cte__stg_countryregion
+    ),
+    address as (
+        select
+            addressid as address_id,
+            addressline1 as address_line_1,
+            addressline2 as address_line_2,
+            city,
+            stateprovince.name as state_province_name,
+            countryregion.name as country_name
+        from __dbt__cte__stg_address as address
+        left join stateprovince on address.stateprovinceid = stateprovince.stateprovinceid
+        left join countryregion on
+            stateprovince.countryregioncode = countryregion.countryregioncode
+    )
+select * from address
+  );
+    
+2021-10-31 14:50:38.894678 (Thread-1): finished collecting timing info
+2021-10-31 14:50:38.896413 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c80b6eb2-d7d5-4761-94ee-a78216860c18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f62e7fe3be0>]}
+2021-10-31 14:50:38.898001 (Thread-1): 11:50:38 | 5 of 6 OK created table model adventureworks_marts.dim_address....... [CREATE TABLE (19.6k rows, 898.3 KB processed) in 4.24s]
+2021-10-31 14:50:38.899734 (Thread-1): Finished running node model.adventure_works.dim_address
+2021-10-31 14:50:38.905085 (Thread-1): Began running node model.adventure_works.fact_sale
+2021-10-31 14:50:38.908082 (Thread-1): 11:50:38 | 6 of 6 START table model adventureworks_marts.fact_sale.............. [RUN]
+2021-10-31 14:50:38.910522 (Thread-1): Acquiring new bigquery connection "model.adventure_works.fact_sale".
+2021-10-31 14:50:38.911910 (Thread-1): Compiling model.adventure_works.fact_sale
+2021-10-31 14:50:38.969365 (Thread-1): Writing injected SQL for node "model.adventure_works.fact_sale"
+2021-10-31 14:50:38.969922 (Thread-1): finished collecting timing info
+2021-10-31 14:50:38.972389 (Thread-1): Writing runtime SQL for node "model.adventure_works.fact_sale"
+2021-10-31 14:50:38.972822 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 14:50:38.977253 (Thread-1): On model.adventure_works.fact_sale: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "model.adventure_works.fact_sale"} */
+
+
+  create or replace table `indicium-academy-328121`.`adventureworks_marts`.`fact_sale`
+  
+  
+  OPTIONS()
+  as (
+    with
+     __dbt__cte__stg_customer as (
+with
+    source as (
+        select
+            customerid,
+            personid,
+            storeid,
+            territoryid,
+            modifieddate,
+
+            rowguid,
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`customer`
+    )
+
+select * from source
+),  __dbt__cte__stg_shipmethod as (
+with
+    source as (
+        select 
+            shipmethodid,
+            name,
+            shipbase,
+            shiprate,
+            modifieddate,
+
+            rowguid,
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`shipmethod`
+    )
+
+select * from source
+),  __dbt__cte__stg_salesorderdetail as (
+with
+    source as (
+        select
+            salesorderdetailid,
+            salesorderid,
+            productid,
+            specialofferid,
+            unitprice,
+            unitpricediscount,
+            orderqty,
+            carriertrackingnumber,
+            modifieddate,
+
+            rowguid,
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at,
+        from `indicium-academy-328121`.`adventureworks`.`salesorderdetail`
+    )
+
+select * from source
+),  __dbt__cte__stg_store as (
+with
+    source as (
+        select
+            businessentityid,
+            name,
+            salespersonid,
+            modifieddate,
+
+            rowguid,
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`store`
+    )
+
+select * from source
+),  __dbt__cte__stg_creditcard as (
+with
+    source as (
+        select 
+            creditcardid,
+            cardtype,
+            cardnumber,
+            expmonth,
+            expyear,
+            modifieddate,
+
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`creditcard`
+    )
+
+select * from source
+),  __dbt__cte__stg_salesorderheadersalesreason as (
+with
+    source as (
+        select
+            salesorderid,
+            salesreasonid,
+            modifieddate,
+
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`salesorderheadersalesreason`
+    )
+
+select * from source
+),  __dbt__cte__stg_salesreason as (
+with
+    source as (
+        select
+            salesreasonid,
+            name,
+            reasontype,
+            modifieddate,
+
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`salesreason`
+    )
+
+select * from source
+),  __dbt__cte__stg_salesorderheader as (
+with
+    source as (
+        select 
+            salesorderid,
+            customerid,
+            salespersonid,
+            shipmethodid,
+            billtoaddressid,
+            shiptoaddressid,
+            territoryid,
+            currencyrateid,
+            creditcardid,
+
+            purchaseordernumber,
+            taxamt,
+            onlineorderflag,
+            status,
+            orderdate,
+            creditcardapprovalcode,
+            subtotal,
+            revisionnumber,
+            freight,
+            duedate,
+            totaldue,
+            shipdate,
+            accountnumber,
+            modifieddate,
+
+            rowguid,
+            _sdc_sequence,
+            _sdc_table_version,
+            _sdc_received_at,
+            _sdc_batched_at
+        from `indicium-academy-328121`.`adventureworks`.`salesorderheader`
+    )
+
+select * from source
+),address as (
+        select *
+        from `indicium-academy-328121`.`adventureworks_marts`.`dim_address`
+    ),
+    customer as (
+        select *
+        from __dbt__cte__stg_customer
+    ),
+    employee as (
+        select *
+        from `indicium-academy-328121`.`adventureworks_marts`.`dim_employee`
+    ),
+    product as (
+        select *
+        from `indicium-academy-328121`.`adventureworks_marts`.`dim_product`
+    ),
+    special_offer as (
+        select *
+        from `indicium-academy-328121`.`adventureworks_marts`.`dim_special_offer`
+    ),
+    ship_method as (
+        select *
+        from __dbt__cte__stg_shipmethod
+    ),
+    sales_order_detail as (
+        select *
+        from __dbt__cte__stg_salesorderdetail
+    ),
+    store as (
+        select *
+        from __dbt__cte__stg_store
+    ),
+    credit_card as (
+        select *
+        from __dbt__cte__stg_creditcard
+    ),
+    sales_order_header_sales_reason as (
+        select *
+        from __dbt__cte__stg_salesorderheadersalesreason
+    ),
+    sales_reason as (
+        select *
+        from __dbt__cte__stg_salesreason
+    ),
+    sale_with_sk as (
+        select
+            sale.salespersonid as employee_id,
+            billtoaddressid as bill_address_id,
+            shiptoaddressid as ship_address_id,
+            sales_order_detail.productid as product_id,
+            sales_order_detail.orderqty as order_quantity,
+            sales_order_detail.specialofferid as special_offer_id,
+            sale.customerid as customer_id,
+
+            store.name as store_name,
+            ship_method.name as ship_method,
+
+            orderdate as order_date,
+            duedate as due_date,
+            shipdate as ship_date,
+            status,
+            onlineorderflag as online_order_flag,
+
+            credit_card.cardnumber as credit_card_number,
+            credit_card.cardtype as credit_card_type,
+
+            subtotal as sub_total,
+            taxamt as tax_amount,
+            totaldue as total_due,
+
+            sales_reason.name as reason_name,
+            sales_reason.reasontype as reason_type
+        from __dbt__cte__stg_salesorderheader as sale
+        left join sales_order_detail on
+            sale.salesorderid = sales_order_detail.salesorderid
+        left join customer on sale.customerid = customer.customerid
+        left join store on customer.storeid = store.businessentityid
+        left join credit_card on sale.creditcardid = credit_card.creditcardid
+        left join sales_order_header_sales_reason on
+            sale.salesorderid = sales_order_header_sales_reason.salesorderid
+        left join sales_reason on
+            sales_order_header_sales_reason.salesreasonid = sales_reason.salesreasonid
+        left join ship_method on sale.shipmethodid = ship_method.shipmethodid
+    )
+
+select * from sale_with_sk
+  );
+    
+2021-10-31 14:50:44.606095 (Thread-1): finished collecting timing info
+2021-10-31 14:50:44.608066 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c80b6eb2-d7d5-4761-94ee-a78216860c18', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f62e80469d0>]}
+2021-10-31 14:50:44.609707 (Thread-1): 11:50:44 | 6 of 6 OK created table model adventureworks_marts.fact_sale......... [CREATE TABLE (131.9k rows, 8.9 MB processed) in 5.70s]
+2021-10-31 14:50:44.610761 (Thread-1): Finished running node model.adventure_works.fact_sale
+2021-10-31 14:50:44.616416 (MainThread): Acquiring new bigquery connection "master".
+2021-10-31 14:50:44.619583 (MainThread): 11:50:44 | 
+2021-10-31 14:50:44.621051 (MainThread): 11:50:44 | Finished running 6 table models in 27.39s.
+2021-10-31 14:50:44.624370 (MainThread): Connection 'master' was properly closed.
+2021-10-31 14:50:44.626017 (MainThread): Connection 'model.adventure_works.fact_sale' was properly closed.
+2021-10-31 14:50:44.629453 (MainThread): unclosed <socket.socket fd=12, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 55698, 0, 0), raddr=('2800:3f0:4004:80b::200a', 443, 0, 0)>
+2021-10-31 14:50:44.630234 (MainThread): unclosed <socket.socket fd=13, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 46230, 0, 0), raddr=('2800:3f0:4001:834::200a', 443, 0, 0)>
+2021-10-31 14:50:44.641770 (MainThread): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 55674, 0, 0), raddr=('2800:3f0:4004:80b::200a', 443, 0, 0)>
+2021-10-31 14:50:44.643380 (MainThread): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 46208, 0, 0), raddr=('2800:3f0:4001:834::200a', 443, 0, 0)>
+2021-10-31 14:50:44.643911 (MainThread): unclosed <socket.socket fd=9, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 46218, 0, 0), raddr=('2800:3f0:4001:834::200a', 443, 0, 0)>
+2021-10-31 14:50:44.644632 (MainThread): unclosed <socket.socket fd=8, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 55684, 0, 0), raddr=('2800:3f0:4004:80b::200a', 443, 0, 0)>
+2021-10-31 14:50:44.655735 (MainThread): 
+2021-10-31 14:50:44.656477 (MainThread): Completed successfully
+2021-10-31 14:50:44.656961 (MainThread): 
+Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6
+2021-10-31 14:50:44.657990 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f62e54bc2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f62e540e790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f62e5495430>]}
+2021-10-31 14:50:44.658862 (MainThread): Flushing usage events
+2021-10-31 15:02:37.232696 (MainThread): Running with dbt=0.21.0
+2021-10-31 15:02:38.040553 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.test.TestTask'>, data=False, debug=False, defer=None, exclude=None, fail_fast=False, greedy=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/thiagosfig/.dbt', project_dir=None, record_timing_info=None, rpc_method='test', schema=False, select=None, selector_name=None, single_threaded=False, state=None, store_failures=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='test', write_json=True)
+2021-10-31 15:02:38.043259 (MainThread): Tracking: tracking
+2021-10-31 15:02:38.078900 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0092623400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f008f763be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f008f778100>]}
+2021-10-31 15:02:38.100608 (MainThread): Partial parsing not enabled
+2021-10-31 15:02:38.117379 (MainThread): Parsing macros/catalog.sql
+2021-10-31 15:02:38.125868 (MainThread): Parsing macros/etc.sql
+2021-10-31 15:02:38.128180 (MainThread): Parsing macros/adapters.sql
+2021-10-31 15:02:38.157528 (MainThread): Parsing macros/materializations/incremental.sql
+2021-10-31 15:02:38.177177 (MainThread): Parsing macros/materializations/table.sql
+2021-10-31 15:02:38.188174 (MainThread): Parsing macros/materializations/copy.sql
+2021-10-31 15:02:38.192406 (MainThread): Parsing macros/materializations/seed.sql
+2021-10-31 15:02:38.195594 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-10-31 15:02:38.197617 (MainThread): Parsing macros/materializations/view.sql
+2021-10-31 15:02:38.200765 (MainThread): Parsing macros/core.sql
+2021-10-31 15:02:38.205384 (MainThread): Parsing macros/adapters/common.sql
+2021-10-31 15:02:38.271544 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-10-31 15:02:38.275236 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-10-31 15:02:38.277018 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-10-31 15:02:38.278516 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-10-31 15:02:38.280548 (MainThread): Parsing macros/etc/datetime.sql
+2021-10-31 15:02:38.291228 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-10-31 15:02:38.293258 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-10-31 15:02:38.295075 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-10-31 15:02:38.297251 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-10-31 15:02:38.299050 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-10-31 15:02:38.301841 (MainThread): Parsing macros/etc/query.sql
+2021-10-31 15:02:38.303039 (MainThread): Parsing macros/materializations/helpers.sql
+2021-10-31 15:02:38.314963 (MainThread): Parsing macros/materializations/test.sql
+2021-10-31 15:02:38.323063 (MainThread): Parsing macros/materializations/table/table.sql
+2021-10-31 15:02:38.332169 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-10-31 15:02:38.337044 (MainThread): Parsing macros/materializations/view/view.sql
+2021-10-31 15:02:38.346109 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-10-31 15:02:38.372605 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-10-31 15:02:38.388891 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-10-31 15:02:38.400885 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-10-31 15:02:38.403156 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-10-31 15:02:38.426365 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-10-31 15:02:38.428591 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-10-31 15:02:38.449144 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-10-31 15:02:38.752142 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_specialofferproduct".
+2021-10-31 15:02:38.772334 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_product".
+2021-10-31 15:02:38.780099 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesreason".
+2021-10-31 15:02:38.785591 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_stateprovince".
+2021-10-31 15:02:38.791745 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_department".
+2021-10-31 15:02:38.799295 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesorderdetail".
+2021-10-31 15:02:38.804134 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_store".
+2021-10-31 15:02:38.812741 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_employee".
+2021-10-31 15:02:38.818209 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_customer".
+2021-10-31 15:02:38.823389 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesperson".
+2021-10-31 15:02:38.831559 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_specialoffer".
+2021-10-31 15:02:38.836917 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_businessentityaddress".
+2021-10-31 15:02:38.843778 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesorderheader".
+2021-10-31 15:02:38.849235 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_countryregion".
+2021-10-31 15:02:38.854479 (MainThread): 1699: statically parsed staging/stg_address.sql
+2021-10-31 15:02:38.855000 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_address".
+2021-10-31 15:02:38.861234 (MainThread): Sending event: {'category': 'dbt', 'action': 'experimental_parser', 'label': 'efe1ed54-2702-42d1-a83c-952b13fed7ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f008f602970>]}
+2021-10-31 15:02:38.862827 (MainThread): 1699: statically parsed staging/stg_shipmethod.sql
+2021-10-31 15:02:38.863101 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_shipmethod".
+2021-10-31 15:02:38.866505 (MainThread): Sending event: {'category': 'dbt', 'action': 'experimental_parser', 'label': 'efe1ed54-2702-42d1-a83c-952b13fed7ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f008f755910>]}
+2021-10-31 15:02:38.867945 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_creditcard".
+2021-10-31 15:02:38.873063 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_businessentity".
+2021-10-31 15:02:38.877981 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_salesorderheadersalesreason".
+2021-10-31 15:02:38.882366 (MainThread): Acquiring new bigquery connection "model.adventure_works.stg_person".
+2021-10-31 15:02:38.886823 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_address".
+2021-10-31 15:02:38.893044 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_customer".
+2021-10-31 15:02:38.897590 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_product".
+2021-10-31 15:02:38.902134 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_special_offer".
+2021-10-31 15:02:38.907641 (MainThread): Acquiring new bigquery connection "model.adventure_works.dim_employee".
+2021-10-31 15:02:38.912936 (MainThread): Acquiring new bigquery connection "model.adventure_works.fact_sale".
+2021-10-31 15:02:39.055748 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'efe1ed54-2702-42d1-a83c-952b13fed7ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f008f602c40>]}
+2021-10-31 15:02:39.068717 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'efe1ed54-2702-42d1-a83c-952b13fed7ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f008f602910>]}
+2021-10-31 15:02:39.069329 (MainThread): Found 26 models, 10 tests, 0 snapshots, 0 analyses, 184 macros, 0 operations, 0 seed files, 20 sources, 0 exposures
+2021-10-31 15:02:39.074331 (MainThread): 
+2021-10-31 15:02:39.075410 (MainThread): Acquiring new bigquery connection "master".
+2021-10-31 15:02:39.077302 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_indicium-academy-328121_adventureworks_marts".
+2021-10-31 15:02:39.077733 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state init
+2021-10-31 15:02:39.083825 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-10-31 15:02:40.302371 (MainThread): 12:02:40 | Concurrency: 1 threads (target='dev')
+2021-10-31 15:02:40.302686 (MainThread): 12:02:40 | 
+2021-10-31 15:02:40.306182 (Thread-1): Began running node test.adventure_works.not_null_dim_address_address_id.488ef37e96
+2021-10-31 15:02:40.307491 (Thread-1): 12:02:40 | 1 of 10 START test not_null_dim_address_address_id................... [RUN]
+2021-10-31 15:02:40.314189 (Thread-1): Acquiring new bigquery connection "test.adventure_works.not_null_dim_address_address_id.488ef37e96".
+2021-10-31 15:02:40.315570 (Thread-1): Compiling test.adventure_works.not_null_dim_address_address_id.488ef37e96
+2021-10-31 15:02:40.339100 (Thread-1): Writing injected SQL for node "test.adventure_works.not_null_dim_address_address_id.488ef37e96"
+2021-10-31 15:02:40.340385 (Thread-1): finished collecting timing info
+2021-10-31 15:02:40.383854 (Thread-1): Writing runtime SQL for node "test.adventure_works.not_null_dim_address_address_id.488ef37e96"
+2021-10-31 15:02:40.384826 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 15:02:40.390235 (Thread-1): On test.adventure_works.not_null_dim_address_address_id.488ef37e96: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "test.adventure_works.not_null_dim_address_address_id.488ef37e96"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `indicium-academy-328121`.`adventureworks_marts`.`dim_address`
+where address_id is null
+
+
+
+      
+    ) dbt_internal_test
+2021-10-31 15:02:43.552175 (Thread-1): finished collecting timing info
+2021-10-31 15:02:43.554051 (Thread-1): 12:02:43 | 1 of 10 PASS not_null_dim_address_address_id......................... [PASS in 3.25s]
+2021-10-31 15:02:43.556157 (Thread-1): Finished running node test.adventure_works.not_null_dim_address_address_id.488ef37e96
+2021-10-31 15:02:43.557850 (Thread-1): Began running node test.adventure_works.not_null_dim_customer_customer_id.9775012dfc
+2021-10-31 15:02:43.560005 (Thread-1): 12:02:43 | 2 of 10 START test not_null_dim_customer_customer_id................. [RUN]
+2021-10-31 15:02:43.563291 (Thread-1): Acquiring new bigquery connection "test.adventure_works.not_null_dim_customer_customer_id.9775012dfc".
+2021-10-31 15:02:43.564649 (Thread-1): Compiling test.adventure_works.not_null_dim_customer_customer_id.9775012dfc
+2021-10-31 15:02:43.570650 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 60952, 0, 0), raddr=('2800:3f0:4001:808::200a', 443, 0, 0)>
+2021-10-31 15:02:43.573563 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 43654, 0, 0), raddr=('2800:3f0:4004:802::200a', 443, 0, 0)>
+2021-10-31 15:02:43.575284 (Thread-1): unclosed <socket.socket fd=10, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 43658, 0, 0), raddr=('2800:3f0:4004:802::200a', 443, 0, 0)>
+2021-10-31 15:02:43.577550 (Thread-1): unclosed <socket.socket fd=11, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 60956, 0, 0), raddr=('2800:3f0:4001:808::200a', 443, 0, 0)>
+2021-10-31 15:02:43.593673 (Thread-1): Writing injected SQL for node "test.adventure_works.not_null_dim_customer_customer_id.9775012dfc"
+2021-10-31 15:02:43.607552 (Thread-1): finished collecting timing info
+2021-10-31 15:02:43.620196 (Thread-1): Writing runtime SQL for node "test.adventure_works.not_null_dim_customer_customer_id.9775012dfc"
+2021-10-31 15:02:43.625316 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 15:02:43.656909 (Thread-1): On test.adventure_works.not_null_dim_customer_customer_id.9775012dfc: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "test.adventure_works.not_null_dim_customer_customer_id.9775012dfc"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `indicium-academy-328121`.`adventureworks_marts`.`dim_customer`
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+2021-10-31 15:02:46.316340 (Thread-1): finished collecting timing info
+2021-10-31 15:02:46.318216 (Thread-1): 12:02:46 | 2 of 10 PASS not_null_dim_customer_customer_id....................... [PASS in 2.76s]
+2021-10-31 15:02:46.319192 (Thread-1): Finished running node test.adventure_works.not_null_dim_customer_customer_id.9775012dfc
+2021-10-31 15:02:46.320536 (Thread-1): Began running node test.adventure_works.not_null_dim_employee_employee_id.a23f287404
+2021-10-31 15:02:46.325837 (Thread-1): 12:02:46 | 3 of 10 START test not_null_dim_employee_employee_id................. [RUN]
+2021-10-31 15:02:46.329821 (Thread-1): Acquiring new bigquery connection "test.adventure_works.not_null_dim_employee_employee_id.a23f287404".
+2021-10-31 15:02:46.331366 (Thread-1): Compiling test.adventure_works.not_null_dim_employee_employee_id.a23f287404
+2021-10-31 15:02:46.335546 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 43664, 0, 0), raddr=('2800:3f0:4004:802::200a', 443, 0, 0)>
+2021-10-31 15:02:46.337233 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 60962, 0, 0), raddr=('2800:3f0:4001:808::200a', 443, 0, 0)>
+2021-10-31 15:02:46.352545 (Thread-1): Writing injected SQL for node "test.adventure_works.not_null_dim_employee_employee_id.a23f287404"
+2021-10-31 15:02:46.353261 (Thread-1): finished collecting timing info
+2021-10-31 15:02:46.357943 (Thread-1): Writing runtime SQL for node "test.adventure_works.not_null_dim_employee_employee_id.a23f287404"
+2021-10-31 15:02:46.359627 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 15:02:46.367202 (Thread-1): On test.adventure_works.not_null_dim_employee_employee_id.a23f287404: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "test.adventure_works.not_null_dim_employee_employee_id.a23f287404"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `indicium-academy-328121`.`adventureworks_marts`.`dim_employee`
+where employee_id is null
+
+
+
+      
+    ) dbt_internal_test
+2021-10-31 15:02:49.045517 (Thread-1): finished collecting timing info
+2021-10-31 15:02:49.047362 (Thread-1): 12:02:49 | 3 of 10 PASS not_null_dim_employee_employee_id....................... [PASS in 2.72s]
+2021-10-31 15:02:49.048331 (Thread-1): Finished running node test.adventure_works.not_null_dim_employee_employee_id.a23f287404
+2021-10-31 15:02:49.049655 (Thread-1): Began running node test.adventure_works.not_null_dim_product_product_id.02b1f06816
+2021-10-31 15:02:49.051465 (Thread-1): 12:02:49 | 4 of 10 START test not_null_dim_product_product_id................... [RUN]
+2021-10-31 15:02:49.053650 (Thread-1): Acquiring new bigquery connection "test.adventure_works.not_null_dim_product_product_id.02b1f06816".
+2021-10-31 15:02:49.055756 (Thread-1): Compiling test.adventure_works.not_null_dim_product_product_id.02b1f06816
+2021-10-31 15:02:49.079091 (Thread-1): Writing injected SQL for node "test.adventure_works.not_null_dim_product_product_id.02b1f06816"
+2021-10-31 15:02:49.081532 (Thread-1): finished collecting timing info
+2021-10-31 15:02:49.096077 (Thread-1): Writing runtime SQL for node "test.adventure_works.not_null_dim_product_product_id.02b1f06816"
+2021-10-31 15:02:49.098635 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 15:02:49.117661 (Thread-1): On test.adventure_works.not_null_dim_product_product_id.02b1f06816: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "test.adventure_works.not_null_dim_product_product_id.02b1f06816"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `indicium-academy-328121`.`adventureworks_marts`.`dim_product`
+where product_id is null
+
+
+
+      
+    ) dbt_internal_test
+2021-10-31 15:02:51.957949 (Thread-1): finished collecting timing info
+2021-10-31 15:02:51.961467 (Thread-1): 12:02:51 | 4 of 10 PASS not_null_dim_product_product_id......................... [PASS in 2.91s]
+2021-10-31 15:02:51.962529 (Thread-1): Finished running node test.adventure_works.not_null_dim_product_product_id.02b1f06816
+2021-10-31 15:02:51.963974 (Thread-1): Began running node test.adventure_works.not_null_dim_special_offer_special_offer_id.1eb0990b7c
+2021-10-31 15:02:51.965540 (Thread-1): 12:02:51 | 5 of 10 START test not_null_dim_special_offer_special_offer_id....... [RUN]
+2021-10-31 15:02:51.967650 (Thread-1): Acquiring new bigquery connection "test.adventure_works.not_null_dim_special_offer_special_offer_id.1eb0990b7c".
+2021-10-31 15:02:51.968950 (Thread-1): Compiling test.adventure_works.not_null_dim_special_offer_special_offer_id.1eb0990b7c
+2021-10-31 15:02:51.987864 (Thread-1): Writing injected SQL for node "test.adventure_works.not_null_dim_special_offer_special_offer_id.1eb0990b7c"
+2021-10-31 15:02:51.991729 (Thread-1): finished collecting timing info
+2021-10-31 15:02:52.001773 (Thread-1): Writing runtime SQL for node "test.adventure_works.not_null_dim_special_offer_special_offer_id.1eb0990b7c"
+2021-10-31 15:02:52.003671 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 15:02:52.025586 (Thread-1): On test.adventure_works.not_null_dim_special_offer_special_offer_id.1eb0990b7c: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "test.adventure_works.not_null_dim_special_offer_special_offer_id.1eb0990b7c"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `indicium-academy-328121`.`adventureworks_marts`.`dim_special_offer`
+where special_offer_id is null
+
+
+
+      
+    ) dbt_internal_test
+2021-10-31 15:02:54.231149 (Thread-1): finished collecting timing info
+2021-10-31 15:02:54.232937 (Thread-1): 12:02:54 | 5 of 10 PASS not_null_dim_special_offer_special_offer_id............. [PASS in 2.27s]
+2021-10-31 15:02:54.233938 (Thread-1): Finished running node test.adventure_works.not_null_dim_special_offer_special_offer_id.1eb0990b7c
+2021-10-31 15:02:54.238553 (Thread-1): Began running node test.adventure_works.unique_dim_address_address_id.7c4ab185ba
+2021-10-31 15:02:54.240215 (Thread-1): 12:02:54 | 6 of 10 START test unique_dim_address_address_id..................... [RUN]
+2021-10-31 15:02:54.249218 (Thread-1): Acquiring new bigquery connection "test.adventure_works.unique_dim_address_address_id.7c4ab185ba".
+2021-10-31 15:02:54.251178 (Thread-1): Compiling test.adventure_works.unique_dim_address_address_id.7c4ab185ba
+2021-10-31 15:02:54.256415 (Thread-1): unclosed <socket.socket fd=12, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 58120, 0, 0), raddr=('2800:3f0:4001:82a::200a', 443, 0, 0)>
+2021-10-31 15:02:54.259683 (Thread-1): unclosed <socket.socket fd=13, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 60974, 0, 0), raddr=('2800:3f0:4001:808::200a', 443, 0, 0)>
+2021-10-31 15:02:54.278980 (Thread-1): Writing injected SQL for node "test.adventure_works.unique_dim_address_address_id.7c4ab185ba"
+2021-10-31 15:02:54.280458 (Thread-1): finished collecting timing info
+2021-10-31 15:02:54.288090 (Thread-1): Writing runtime SQL for node "test.adventure_works.unique_dim_address_address_id.7c4ab185ba"
+2021-10-31 15:02:54.289316 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 15:02:54.298983 (Thread-1): On test.adventure_works.unique_dim_address_address_id.7c4ab185ba: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "test.adventure_works.unique_dim_address_address_id.7c4ab185ba"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    address_id as unique_field,
+    count(*) as n_records
+
+from `indicium-academy-328121`.`adventureworks_marts`.`dim_address`
+where address_id is not null
+group by address_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2021-10-31 15:02:57.244439 (Thread-1): finished collecting timing info
+2021-10-31 15:02:57.248231 (Thread-1): 12:02:57 | 6 of 10 PASS unique_dim_address_address_id........................... [PASS in 3.00s]
+2021-10-31 15:02:57.252097 (Thread-1): Finished running node test.adventure_works.unique_dim_address_address_id.7c4ab185ba
+2021-10-31 15:02:57.253766 (Thread-1): Began running node test.adventure_works.unique_dim_customer_customer_id.b42affccd1
+2021-10-31 15:02:57.270451 (Thread-1): 12:02:57 | 7 of 10 START test unique_dim_customer_customer_id................... [RUN]
+2021-10-31 15:02:57.273887 (Thread-1): Acquiring new bigquery connection "test.adventure_works.unique_dim_customer_customer_id.b42affccd1".
+2021-10-31 15:02:57.276282 (Thread-1): Compiling test.adventure_works.unique_dim_customer_customer_id.b42affccd1
+2021-10-31 15:02:57.296855 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 58112, 0, 0), raddr=('2800:3f0:4001:82a::200a', 443, 0, 0)>
+2021-10-31 15:02:57.297947 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 60966, 0, 0), raddr=('2800:3f0:4001:808::200a', 443, 0, 0)>
+2021-10-31 15:02:57.299116 (Thread-1): unclosed <socket.socket fd=11, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 60970, 0, 0), raddr=('2800:3f0:4001:808::200a', 443, 0, 0)>
+2021-10-31 15:02:57.300858 (Thread-1): unclosed <socket.socket fd=10, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 58116, 0, 0), raddr=('2800:3f0:4001:82a::200a', 443, 0, 0)>
+2021-10-31 15:02:57.304419 (Thread-1): unclosed <socket.socket fd=13, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 60978, 0, 0), raddr=('2800:3f0:4001:808::200a', 443, 0, 0)>
+2021-10-31 15:02:57.304966 (Thread-1): unclosed <socket.socket fd=12, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 58124, 0, 0), raddr=('2800:3f0:4001:82a::200a', 443, 0, 0)>
+2021-10-31 15:02:57.308181 (Thread-1): Writing injected SQL for node "test.adventure_works.unique_dim_customer_customer_id.b42affccd1"
+2021-10-31 15:02:57.309122 (Thread-1): finished collecting timing info
+2021-10-31 15:02:57.314362 (Thread-1): Writing runtime SQL for node "test.adventure_works.unique_dim_customer_customer_id.b42affccd1"
+2021-10-31 15:02:57.315293 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 15:02:57.325094 (Thread-1): On test.adventure_works.unique_dim_customer_customer_id.b42affccd1: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "test.adventure_works.unique_dim_customer_customer_id.b42affccd1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from `indicium-academy-328121`.`adventureworks_marts`.`dim_customer`
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2021-10-31 15:03:00.687285 (Thread-1): finished collecting timing info
+2021-10-31 15:03:00.691482 (Thread-1): 12:03:00 | 7 of 10 PASS unique_dim_customer_customer_id......................... [PASS in 3.42s]
+2021-10-31 15:03:00.692985 (Thread-1): Finished running node test.adventure_works.unique_dim_customer_customer_id.b42affccd1
+2021-10-31 15:03:00.695159 (Thread-1): Began running node test.adventure_works.unique_dim_employee_employee_id.2ebb85abad
+2021-10-31 15:03:00.697351 (Thread-1): 12:03:00 | 8 of 10 START test unique_dim_employee_employee_id................... [RUN]
+2021-10-31 15:03:00.699707 (Thread-1): Acquiring new bigquery connection "test.adventure_works.unique_dim_employee_employee_id.2ebb85abad".
+2021-10-31 15:03:00.701187 (Thread-1): Compiling test.adventure_works.unique_dim_employee_employee_id.2ebb85abad
+2021-10-31 15:03:00.711501 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 58128, 0, 0), raddr=('2800:3f0:4001:82a::200a', 443, 0, 0)>
+2021-10-31 15:03:00.714034 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 60982, 0, 0), raddr=('2800:3f0:4001:808::200a', 443, 0, 0)>
+2021-10-31 15:03:00.734942 (Thread-1): Writing injected SQL for node "test.adventure_works.unique_dim_employee_employee_id.2ebb85abad"
+2021-10-31 15:03:00.737091 (Thread-1): finished collecting timing info
+2021-10-31 15:03:00.771708 (Thread-1): Writing runtime SQL for node "test.adventure_works.unique_dim_employee_employee_id.2ebb85abad"
+2021-10-31 15:03:00.775886 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 15:03:00.800732 (Thread-1): On test.adventure_works.unique_dim_employee_employee_id.2ebb85abad: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "test.adventure_works.unique_dim_employee_employee_id.2ebb85abad"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    employee_id as unique_field,
+    count(*) as n_records
+
+from `indicium-academy-328121`.`adventureworks_marts`.`dim_employee`
+where employee_id is not null
+group by employee_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2021-10-31 15:03:03.986976 (Thread-1): finished collecting timing info
+2021-10-31 15:03:03.990038 (Thread-1): 12:03:03 | 8 of 10 PASS unique_dim_employee_employee_id......................... [PASS in 3.29s]
+2021-10-31 15:03:03.991885 (Thread-1): Finished running node test.adventure_works.unique_dim_employee_employee_id.2ebb85abad
+2021-10-31 15:03:03.993458 (Thread-1): Began running node test.adventure_works.unique_dim_product_product_id.46495bf7fe
+2021-10-31 15:03:03.995276 (Thread-1): 12:03:03 | 9 of 10 START test unique_dim_product_product_id..................... [RUN]
+2021-10-31 15:03:03.998926 (Thread-1): Acquiring new bigquery connection "test.adventure_works.unique_dim_product_product_id.46495bf7fe".
+2021-10-31 15:03:04.000370 (Thread-1): Compiling test.adventure_works.unique_dim_product_product_id.46495bf7fe
+2021-10-31 15:03:04.003960 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 58132, 0, 0), raddr=('2800:3f0:4001:82a::200a', 443, 0, 0)>
+2021-10-31 15:03:04.006423 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET6, type=SocketKind.SOCK_STREAM, proto=6, laddr=('2804:5c:4ddf:6000:8a1:a4fa:758e:f4a9', 60986, 0, 0), raddr=('2800:3f0:4001:808::200a', 443, 0, 0)>
+2021-10-31 15:03:04.028953 (Thread-1): Writing injected SQL for node "test.adventure_works.unique_dim_product_product_id.46495bf7fe"
+2021-10-31 15:03:04.032195 (Thread-1): finished collecting timing info
+2021-10-31 15:03:04.046596 (Thread-1): Writing runtime SQL for node "test.adventure_works.unique_dim_product_product_id.46495bf7fe"
+2021-10-31 15:03:04.049049 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 15:03:04.079927 (Thread-1): On test.adventure_works.unique_dim_product_product_id.46495bf7fe: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "test.adventure_works.unique_dim_product_product_id.46495bf7fe"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    product_id as unique_field,
+    count(*) as n_records
+
+from `indicium-academy-328121`.`adventureworks_marts`.`dim_product`
+where product_id is not null
+group by product_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2021-10-31 15:03:07.099869 (Thread-1): finished collecting timing info
+2021-10-31 15:03:07.101700 (Thread-1): 12:03:07 | 9 of 10 PASS unique_dim_product_product_id........................... [PASS in 3.10s]
+2021-10-31 15:03:07.102787 (Thread-1): Finished running node test.adventure_works.unique_dim_product_product_id.46495bf7fe
+2021-10-31 15:03:07.104271 (Thread-1): Began running node test.adventure_works.unique_dim_special_offer_special_offer_id.cc69ea6f76
+2021-10-31 15:03:07.107102 (Thread-1): 12:03:07 | 10 of 10 START test unique_dim_special_offer_special_offer_id........ [RUN]
+2021-10-31 15:03:07.113516 (Thread-1): Acquiring new bigquery connection "test.adventure_works.unique_dim_special_offer_special_offer_id.cc69ea6f76".
+2021-10-31 15:03:07.116560 (Thread-1): Compiling test.adventure_works.unique_dim_special_offer_special_offer_id.cc69ea6f76
+2021-10-31 15:03:07.150367 (Thread-1): Writing injected SQL for node "test.adventure_works.unique_dim_special_offer_special_offer_id.cc69ea6f76"
+2021-10-31 15:03:07.154088 (Thread-1): finished collecting timing info
+2021-10-31 15:03:07.169162 (Thread-1): Writing runtime SQL for node "test.adventure_works.unique_dim_special_offer_special_offer_id.cc69ea6f76"
+2021-10-31 15:03:07.173013 (Thread-1): Opening a new connection, currently in state closed
+2021-10-31 15:03:07.200801 (Thread-1): On test.adventure_works.unique_dim_special_offer_special_offer_id.cc69ea6f76: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "adventure_works", "target_name": "dev", "node_id": "test.adventure_works.unique_dim_special_offer_special_offer_id.cc69ea6f76"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    special_offer_id as unique_field,
+    count(*) as n_records
+
+from `indicium-academy-328121`.`adventureworks_marts`.`dim_special_offer`
+where special_offer_id is not null
+group by special_offer_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2021-10-31 15:03:09.903916 (Thread-1): finished collecting timing info
+2021-10-31 15:03:09.907020 (Thread-1): 12:03:09 | 10 of 10 PASS unique_dim_special_offer_special_offer_id.............. [PASS in 2.80s]
+2021-10-31 15:03:09.910682 (Thread-1): Finished running node test.adventure_works.unique_dim_special_offer_special_offer_id.cc69ea6f76
+2021-10-31 15:03:09.923589 (MainThread): Acquiring new bigquery connection "master".
+2021-10-31 15:03:09.927962 (MainThread): 12:03:09 | 
+2021-10-31 15:03:09.930472 (MainThread): 12:03:09 | Finished running 10 tests in 30.85s.
+2021-10-31 15:03:09.935964 (MainThread): Connection 'master' was properly closed.
+2021-10-31 15:03:09.937270 (MainThread): Connection 'test.adventure_works.unique_dim_special_offer_special_offer_id.cc69ea6f76' was properly closed.
+2021-10-31 15:03:10.007691 (MainThread): 
+2021-10-31 15:03:10.009307 (MainThread): Completed successfully
+2021-10-31 15:03:10.011648 (MainThread): 
+Done. PASS=10 WARN=0 ERROR=0 SKIP=0 TOTAL=10
+2021-10-31 15:03:10.013632 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f008f5f2040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0092623400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f008f5fd8b0>]}
+2021-10-31 15:03:10.016530 (MainThread): Flushing usage events

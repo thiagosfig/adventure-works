@@ -1,0 +1,8 @@
+version: 2
+models:
+  - name: dim_special_offer
+    columns:
+      - name: special_offer_id
+        tests:
+          - unique
+          - not_null
